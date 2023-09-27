@@ -61,20 +61,15 @@ def download_video_and_subtitles(url, path, fixed_folder, max_retries=30):
                 print(f"Failed to download video or subtitles after {max_retries} retries.")
 
 if __name__ == "__main__":
-    # Path to the text file containing video URLs, one URL per line
     url_file_path = r"C:\Users\Isaac\Desktop\NTU\Y3S2\FYP\Misc Stuff\Test\video_urls.txt"
 
-    # Read video URLs from the file
     with open(url_file_path, "r") as url_file:
         video_urls = [line.strip() for line in url_file]
 
-    # Path to save the downloaded videos and subtitles
     download_path = r"C:\Users\Isaac\Desktop\NTU\Y3S2\FYP\Misc Stuff\Test"
 
-    # Fixed folder to store all the subtitle files
     fixed_folder = r"C:\Users\Isaac\Desktop\NTU\Y3S2\FYP\Misc Stuff\Test"
     
-    # Download all videos and subtitles in the list
     for url in video_urls:
         download_video_and_subtitles(url, download_path, fixed_folder)
 
